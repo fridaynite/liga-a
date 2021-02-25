@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+import { apiRoot } from '../config/config'
+
 export const GET_POSTS_REQUEST = 'GET_POSTS_REQUEST'
 export const GET_POSTS_SUCCESS = 'GET_POSTS_SUCCESS'
 export const GET_POSTS_ERROR = 'GET_POSTS_ERROR'
@@ -28,7 +30,7 @@ export const getPosts = () => async (dispatch) => {
   const req = getPostsRequest()
   dispatch(req)
 
-  const url = 'https://jsonplaceholder.typicode.com/posts'
+  const url = `${apiRoot}/posts`
 
   try {
     const response = await axios.get(url)

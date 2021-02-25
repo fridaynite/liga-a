@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+import { apiRoot } from '../config/config'
+
 export const GET_USERS_REQUEST = 'GET_USERS_REQUEST'
 export const GET_USERS_SUCCESS = 'GET_USERS_SUCCESS'
 export const GET_USERS_ERROR = 'GET_USERS_ERROR'
@@ -28,7 +30,7 @@ export const getUsers = () => async (dispatch) => {
   const req = getUsersRequest()
   dispatch(req)
 
-  const url = 'https://jsonplaceholder.typicode.com/users'
+  const url = `${apiRoot}/users`
 
   try {
     const response = await axios.get(url)
