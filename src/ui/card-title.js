@@ -5,4 +5,7 @@ export const CardTitle = styled.h2`
   font-weight: normal;
   margin-top: 5px;
   margin-bottom: 5px;
+  padding-top: 13px;
+  padding-left: 13px;
+  padding-right: 13px;
 `

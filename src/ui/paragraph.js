@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const Paragraph = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   overflow-wrap: break-word;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 13px;
 `
