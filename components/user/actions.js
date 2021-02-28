@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { apiRoot } from '../config/config'
+import { apiRoot } from '../../config/'
 
 export const GET_USERS_REQUEST = 'GET_USERS_REQUEST'
 export const GET_USERS_SUCCESS = 'GET_USERS_SUCCESS'
@@ -31,6 +31,7 @@ export const getUsers = () => async (dispatch) => {
   dispatch(req)
 
   const url = `${apiRoot}/users`
+  console.log(url)
 
   try {
     const response = await axios.get(url)

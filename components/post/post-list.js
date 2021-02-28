@@ -1,12 +1,8 @@
-import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
-import Post from './post'
-import { getPosts } from './actions'
-import { getUsers } from '../user/actions'
+import Post from './index'
 
 function PostList(props) {
-  const dispatch = useDispatch()
   const posts = useSelector((state) => {
     const data = state.post.posts.map((post) => {
       const author = state.user.users.find((user) => user.id === post.userId)
@@ -26,13 +22,9 @@ function PostList(props) {
     })
   })
 
-  useEffect(() => {
-    dispatch(getPosts())
-    dispatch(getUsers())
-  }, [dispatch])
-
   return posts.map((post) => (
     <Post
+      key={post.id}
       name={post.name}
       username={post.username}
       title={post.title}

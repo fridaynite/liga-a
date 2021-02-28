@@ -1,9 +1,7 @@
 import React from 'react'
 
-import { Card } from '../ui/card'
-import { CardTitle } from '../ui/card-title'
-import { Paragraph } from '../ui/paragraph'
-import { CardName } from '../ui/card-name'
+import { Card, CardTitle, CardName } from './styles'
+import { Paragraph } from '../../ui/paragraph'
 
 function Post(props) {
   return (

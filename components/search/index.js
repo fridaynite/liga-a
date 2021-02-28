@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 
-import { SearchField } from '../ui/search-field'
+import { SearchField } from './styles'
 
 import { setSearchValue } from './actions'
 
